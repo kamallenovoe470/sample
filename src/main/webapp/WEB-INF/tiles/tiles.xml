@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+
+    <!-- Base Define -->
+    <definition name="base.definition"
+                template="/WEB-INF/jsp/layout/layout.jsp">
+        <put-attribute name="title" value="" />
+        <put-attribute name="header" value="/WEB-INF/jsp/layout/header.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/jsp/layout/menu.jsp" />
+        <put-attribute name="body" value="" />
+        <put-attribute name="footer" value="/WEB-INF/jsp/layout/footer.jsp" />
+    </definition>
+
+    <!-- Home Page
+    <definition name="homePage" template="/WEB-INF/jsp/layout/home.jsp" />
+    -->
+    <definition name="homePage" extends="base.definition">
+        <put-attribute name="title" value="Home Page" />
+        <put-attribute name="body" value="/WEB-INF/jsp/page/home.jsp" />
+    </definition>
+
+
+
+    <!-- ContactUs Page -->
+    <definition name="contactusPage" extends="base.definition">
+        <put-attribute name="title" value="Contact Us" />
+        <put-attribute name="body" value="/WEB-INF/jsp/page/contactus.jsp" />
+    </definition>
+    <!-- Data from DB Page -->
+    <definition name="dataPage" extends="base.definition">
+        <put-attribute name="title" value="City Name from Database" />
+        <put-attribute name="body" value="/WEB-INF/jsp/page/data.jsp" />
+    </definition>
+
+
+</tiles-definitions>
